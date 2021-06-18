@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+<!-- Name used here must be same everywhere
+template is the path
+layout.jsp is main page 
+if value="" this means different pages can come there it isn't fixed -->
+	<definition name="base" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Here we have to extends the base for other pages
+	This means we just need to create body and title part and other parts are fixed -->
+	<definition name="home" extends="base">
+		<put-attribute name="title" value="homePage"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Second page -->
+	<definition name="contact" extends="base">
+		<put-attribute name="title" value="contactPage"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/contact.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
