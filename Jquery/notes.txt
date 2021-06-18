@@ -1,0 +1,7 @@
+document.querySelector("h1"); = jQuery("h1") => $("h1")
+
+It's better to use google cdn to downloading jQuery
+
+Preferreable we should include out JS at the end of the body
+
+minifier.org - to minify the js code
