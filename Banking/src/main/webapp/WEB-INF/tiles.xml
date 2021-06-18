@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+<!-- Name used here must be same everywhere
+template is the path
+layout.jsp is main page 
+if value="" this means different pages can come there it isn't fixed -->
+	<definition name="base" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	<!-- Here we have to extends the base for other pages
+	This means we just need to create body and title part and other parts are fixed -->
+	<definition name="home" extends="base">
+		<put-attribute name="title" value="Home"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="deposit" extends="base">
+		<put-attribute name="title" value="Deposit"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/deposit.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="withdraw" extends="base">
+		<put-attribute name="title" value="Withdraw"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/withdraw.jsp"></put-attribute>
+	</definition>
+	
+
+</tiles-definitions>
